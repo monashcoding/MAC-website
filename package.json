@@ -1,0 +1,18 @@
+{
+  "name": "mac-website",
+  "version": "1.0.0",
+  "description": "Official MAC website",
+  "main": "index.js",
+  "repository": "git@github.com:monashcode/MAC-website.git",
+  "author": "khanguslee <khanguslee@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.19.32",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "eslint-config-react-app": "^5.2.0",
+    "prettier": "^1.19.1"
+  }
+}
