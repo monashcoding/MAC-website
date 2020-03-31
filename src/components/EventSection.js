@@ -6,8 +6,8 @@ function EventSection(props) {
     const { title, events } = props;
 
     const renderEvents = (eventList) => {
-        return eventList.map((event) => {
-            return <EventCard title={event.title} />
+        return eventList.map((event, index) => {
+            return <EventCard title={event.title} key={index} />
         })
     }
 
