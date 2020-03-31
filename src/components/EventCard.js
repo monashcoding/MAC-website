@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function EventCard(props) {
     const { title } = props;
@@ -9,6 +10,14 @@ function EventCard(props) {
             <div className="font-bold mx-2 pb-2">{title}</div>
         </div>
     )
+}
+
+EventCard.propTypes = {
+    title: PropTypes.string
+}
+
+EventCard.defaultProps = {
+    title: "No Title"
 }
 
 export default EventCard;
