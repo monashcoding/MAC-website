@@ -1,3 +1,11 @@
 import React from "react"
 
-export default () => <h1>MAC Upcoming Events</h1>
+import Header from '../components/Header';
+
+function IndexPage() {
+    return (
+        <Header />
+    )
+}
+
+export default IndexPage;
