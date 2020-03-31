@@ -1,10 +1,14 @@
 import React from 'react';
 
+import EventCard from './EventCard';
+
 function EventSection(props) {
     const { title } = props;
     return (
         <div className="mx-10 my-5">
-            <h2 className="text-xl">{title}</h2>
+            <div className="text-2xl mb-2">{title}</div>
+            <div className="flex">
+            </div>
         </div>
     )
 }
