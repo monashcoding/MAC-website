@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import EventCard from './EventCard';
 
@@ -19,6 +20,16 @@ function EventSection(props) {
             </div>
         </div>
     )
+}
+
+EventSection.propTypes = {
+    title: PropTypes.string,
+    events: PropTypes.array
+}
+
+EventSection.defaultProps = {
+    title: "",
+    events: [],
 }
 
 export default EventSection;
