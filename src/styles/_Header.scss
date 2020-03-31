@@ -1,4 +1,6 @@
 .header {
-  height: 5em;
-  text-align: center;
+  background-color: $yellowPrimary;
+  h1 {
+    color: $navyPrimary;
+  }
 }
