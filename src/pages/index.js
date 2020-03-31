@@ -6,13 +6,25 @@ import '../styles/styles.scss'
 import EventSection from "../components/EventSection";
 
 function IndexPage() {
+    // TODO: Get events using NetlifyCMS
+    const upcomingEvents = [];
+    const pastEvents = [
+        { title: "MAC x Microsoft | Mock Coding Interviews" },
+        {
+            title: "MAC x Outreach | Intro to Python w/ Turtle"
+        },
+        {
+            title: "MAC x Hack: Cloud Computing w/ NAB"
+        }
+    ];
+
     return (
         <div>
             <Header />
 
-            <EventSection title="Upcoming" />
+            <EventSection title="Upcoming" events={upcomingEvents} />
 
-            <EventSection title="Past" />
+            <EventSection title="Past" events={pastEvents} />
         </div>
     )
 }
