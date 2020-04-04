@@ -14,5 +14,13 @@ module.exports = {
                 modulePath: `${__dirname}/src/cms/cms.js`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `events`,
+                path: `${__dirname}/content/events/`,
+            },
+        },
+        "gatsby-transformer-remark"
     ]
 };
