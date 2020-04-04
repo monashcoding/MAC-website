@@ -1,22 +1,22 @@
-import React from "react"
+import React from 'react';
+import { graphql } from 'gatsby';
 
 import Header from '../components/Header';
 
-import '../styles/styles.scss'
-import EventSection from "../components/EventSection";
+import '../styles/styles.scss';
+import EventSection from '../components/EventSection';
 
-function IndexPage() {
-    // TODO: Get events using NetlifyCMS
+function IndexPage(props) {
+    const { data } = props;
     const upcomingEvents = [];
-    const pastEvents = [
-        { title: "MAC x Microsoft | Mock Coding Interviews" },
-        {
-            title: "MAC x Outreach | Intro to Python w/ Turtle"
-        },
-        {
-            title: "MAC x Hack: Cloud Computing w/ NAB"
-        }
-    ];
+
+    // TODO: Sort data into past and upcoming
+    // Convert the graphql data into a cleaner format
+    const graphqlEventsData = data.allMarkdownRemark.events;
+    const pastEvents = graphqlEventsData.map((item) => {
+        const { id, ...eventDetails } = item.node;
+        return { id: item.node.id, ...eventDetails.post }
+    })
 
     return (
         <div>
@@ -26,7 +26,25 @@ function IndexPage() {
 
             <EventSection title="Past" events={pastEvents} />
         </div>
-    )
+    );
 }
 
 export default IndexPage;
+
+export const eventsQuery = graphql`
+  query {
+    allMarkdownRemark {
+        events: edges {
+            node {
+            id
+            post: frontmatter {
+                description
+                eventDate
+                image
+                title
+            }
+            }
+        }
+    }
+  }
+`;
