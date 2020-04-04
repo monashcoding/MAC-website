@@ -8,14 +8,14 @@ function EventSection(props) {
 
     const renderEvents = (eventList) => {
         return eventList.map((event, index) => {
-            return <EventCard title={event.title} key={index} />
+            return <EventCard key={index} title={event.title} image={event.image} />
         })
     }
 
     return (
         <div className="mx-10 my-5">
             <div className="text-2xl mb-2">{title}</div>
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-around">
                 {!!events.length ? renderEvents(events) : <p>No Events</p>}
             </div>
         </div>
