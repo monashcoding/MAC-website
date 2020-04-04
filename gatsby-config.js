@@ -7,5 +7,7 @@ module.exports = {
                     require("tailwindcss"),
                 ],
             },
-        },]
+        },
+        'gatsby-plugin-netlify-cms'
+    ]
 };
