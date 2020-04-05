@@ -20,5 +20,11 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-162838301-1',
+      },
+    },
   ],
 };
