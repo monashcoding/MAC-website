@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import EventCard from './EventCard';
 
@@ -8,7 +9,9 @@ function EventSection(props) {
 
     const renderEvents = (eventList) => {
         return eventList.map((event, index) => {
-            return <EventCard key={index} title={event.title} image={event.image} />
+            const eventDate = moment(event.eventDate).format("DD/MM/YYYY");
+            const eventTime = moment(event.eventDate).format("hh:mm A")
+            return <EventCard key={index} title={event.title} image={event.image} date={eventDate} time={eventTime} />
         })
     }
 
