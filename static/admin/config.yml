@@ -4,19 +4,19 @@ backend:
 media_folder: static/img
 public_folder: /img
 collections:
-  - name: "events"
-    label: "Events"
+  - name: 'events'
+    label: 'Events'
     folder: content/events
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image', required: false }
+      - { label: 'Description', name: 'description', widget: 'text' }
       - {
-          label: "Event Date",
-          name: "eventDate",
-          widget: "datetime",
-          dateFormat: "DD/MM/YYYY",
-          timeFormat: "hh:mm",
+          label: 'Event Date',
+          name: 'eventDate',
+          widget: 'datetime',
+          dateFormat: 'DD/MM/YYYY',
+          timeFormat: 'hh:mm',
         }
