@@ -1,0 +1,28 @@
+{
+  "name": "mac-website",
+  "version": "1.0.0",
+  "description": "Official MAC website",
+  "main": "index.js",
+  "repository": "git@github.com:monashcode/MAC-website.git",
+  "author": "khanguslee <khanguslee@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gatsby": "^2.19.32",
+    "gatsby-plugin-google-analytics": "^2.2.2",
+    "gatsby-plugin-netlify-cms": "^4.2.2",
+    "gatsby-plugin-sass": "^2.2.1",
+    "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-transformer-remark": "^2.7.1",
+    "moment": "^2.24.0",
+    "netlify-cms-app": "^2.12.3",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "eslint-config-react-app": "^5.2.0",
+    "prettier": "^1.19.1",
+    "prop-types": "^15.7.2",
+    "tailwindcss": "^1.2.0"
+  }
+}
