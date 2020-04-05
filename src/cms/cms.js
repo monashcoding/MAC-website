@@ -1,7 +1,7 @@
-import CMS from "netlify-cms-app"
+import CMS from 'netlify-cms-app';
 
-import EventsPreview from "./preview-templates/eventsPreview";
+import EventsPreview from './preview-templates/eventsPreview';
 
-import "../styles/styles.scss";
+import '../styles/styles.scss';
 
-CMS.registerPreviewTemplate("events", EventsPreview);
+CMS.registerPreviewTemplate('events', EventsPreview);
