@@ -17,7 +17,8 @@
     "netlify-cms-app": "^2.12.3",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
-    "react-dom": "^16.13.0"
+    "react-dom": "^16.13.0",
+    "react-modal": "^3.11.2"
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.0",

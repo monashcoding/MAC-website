@@ -16,6 +16,7 @@ function EventSection(props) {
           key={index}
           title={event.title}
           image={event.image}
+          description={event.description}
           date={eventDate}
           time={eventTime}
         />

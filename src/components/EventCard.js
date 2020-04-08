@@ -1,13 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import Modal from 'react-modal';
 
 import Tag from '../components/Tag';
 
+Modal.setAppElement(`#___gatsby`);
+
 function EventCard(props) {
-  const { title, image, date, time } = props;
+  const { title, image, date, time, description } = props;
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
 
   return (
-    <div className="event-card w-full md:w-2/5 xl:1/3 m-4 h-50 rounded overflow-hidden shadow-lg hover:shadow-xl cursor-pointer">
+    <div onClick={openModal} className="event-card w-full md:w-2/5 xl:1/3 m-4 h-50 rounded overflow-hidden shadow-lg hover:shadow-xl cursor-pointer">
+      <Modal
+        isOpen={modalIsOpen}
+        // onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        shouldCloseOnOverlayClick={true}
+        // style={customStyles}
+        contentLabel="Example Modal"
+      >
+      <div>
+        <div className="font-bold mx-2 pb-2">{title}</div>
+        <div className="mt-4 mx-2">{description}</div>
+      </div>
+      </Modal>
+    
       <div className="image-container relative">
         {(date || time) && (
           <Tag

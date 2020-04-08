@@ -21,7 +21,6 @@ function IndexPage() {
   return (
     <div>
       <Header />
-
       <EventSection title="Upcoming" events={upcomingEvents} />
 
       <EventSection title="Past" events={pastEvents} />
