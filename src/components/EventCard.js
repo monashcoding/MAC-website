@@ -42,8 +42,8 @@ function EventCard(props) {
         contentLabel="Example Modal"
       >
       <div>
-        <div className="relative max-w-full bg-white px-20">
-          <div className="max-w-screen-xl">
+        <div className="relative max-w-full bg-white px-48 py-8 border-b">
+          <div className="max-w-screen-m">
             {(date || time) && (
               <Tag
                 text={`${date}`}
@@ -59,7 +59,7 @@ function EventCard(props) {
 
         </div>
 
-        <div className="relative max-w-full px-20 mx-auto mt-8">
+        <div className="relative max-w-full px-48 mx-auto mt-8">
           {image ? (
             <img
               className="w-7/12 h-full md:h-56 mt-8 mx-2 object-cover"
@@ -72,7 +72,7 @@ function EventCard(props) {
           {description ? (
             <>
             <div className="text-xl text-gray-900 font-bold mx-2 mb-2 mt-8">Details</div>
-            <div className="mt-4 mx-2 w-7/12 text-gray-900 ">{description}</div>
+            <div className="mt-4 mx-2 w-7/12 text-gray-900">{description}</div>
             </>
           ) : (
             <div className="text-l text-gray-900 mx-2">No description yet!</div>
