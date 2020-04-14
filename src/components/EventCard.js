@@ -1,17 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Modal from 'react-modal';
-
+import EventModal from './EventModal';
 import Tag from '../components/Tag';
-
-Modal.setAppElement(`#___gatsby`);
-
-const modalStyles = {
-  content: {
-    backgroundColor: "#f6f7f8",
-    padding: 0
-  }
-};
 
 function EventCard(props) {
   const { title, image, date, time, description } = props;
@@ -28,11 +18,13 @@ function EventCard(props) {
     <div onClick={openModal} className="event-card w-full md:w-2/5 xl:1/3 m-4 h-50 rounded overflow-hidden shadow-lg hover:shadow-xl cursor-pointer">
       <EventModal 
         // key={index}
-        title={event.title}
-        image={event.image}
-        description={event.description}
-        date={eventDate}
-        time={eventTime}
+        closeModal={closeModal}
+        modalIsOpen={modalIsOpen}
+        title={title}
+        image={image}
+        description={description}
+        date={date}
+        time={time}
       />
 
       <div className="image-container relative">
@@ -47,7 +39,7 @@ function EventCard(props) {
             className="w-full h-48 md:h-56 object-cover"
             src={image}
             alt={title}
-          ></img>
+          />
         ) : (
           <div className="h-48 md:h-56"></div>
         )}
