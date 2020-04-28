@@ -1,0 +1,14 @@
+addReviewers: true
+addAssignees: false
+numberOfReviewers: 0
+reviewGroups:
+  groupA:
+    - anna-giang
+    - jasienlt
+    - katherinemof
+    - nchong128
+filterLabels:
+  include:
+    - netlify-cms/draft
+    - netlify-cms/pending_review
+    - netlify-cms/pending_publish
