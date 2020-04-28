@@ -5,7 +5,6 @@ useReviewGroups: true
 reviewGroups:
   groupA:
     - anna-giang
-    - jasienlt
     - katherinemof
     - nchong128
 filterLabels:
