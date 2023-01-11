@@ -13,7 +13,7 @@
     "gatsby-plugin-netlify-cms": "^4.2.2",
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-source-filesystem": "^2.2.2",
-    "gatsby-transformer-remark": "^2.7.1",
+    "gatsby-transformer-remark": "^5.25.1",
     "moment": "^2.24.0",
     "netlify-cms-app": "^2.12.3",
     "node-sass": "^4.13.1",
